@@ -15,7 +15,7 @@
     "url": "https://github.com/simov/chrome-webstore.git"
   },
   "dependencies": {
-    "request-compose": "^2.1.6"
+    "request-compose": "^2.1.7"
   },
   "devDependencies": {
     "request-logs": "^2.1.5"
