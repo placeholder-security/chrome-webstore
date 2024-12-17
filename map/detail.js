@@ -41,7 +41,7 @@ module.exports = (detail) => ({
     '460x340': detail[0][5],
     '700x280': detail[0][17],
   },
-  video: String(detail[11][0][19]).includes('youtube.com')
+  video: String(detail[11]?.[0]?.[19]).includes('youtube.com')
     ? `https://www.youtube.com/watch?v=${detail[11][0][19].replace(/.*embed\/(.*)\?.*/, '$1')}`
     : null,
   screenshots: (String(detail[11][0][19]).includes('youtube.com') ? detail[11].slice(1) : detail[11])
