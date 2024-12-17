@@ -44,7 +44,7 @@ module.exports = (detail) => ({
   video: String(detail[11]?.[0]?.[19]).includes('youtube.com')
     ? `https://www.youtube.com/watch?v=${detail[11][0][19].replace(/.*embed\/(.*)\?.*/, '$1')}`
     : null,
-  screenshots: (String(detail[11][0][19]).includes('youtube.com') ? detail[11].slice(1) : detail[11])
+  screenshots: (String(detail[11]?.[0]?.[19]).includes('youtube.com') ? detail[11].slice(1) : detail[11])
     .map((arr) => arr[17]).filter(Boolean),
   languages: detail[8],
   features: [
